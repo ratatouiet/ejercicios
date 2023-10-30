@@ -22,7 +22,31 @@ def raiz_cuadrada(a):
     if a < 0:
         return 'Error: no se puede calcular la raíz cuadrada de un numero negativo'
     else:
-        return match.sqrt(a)
+        return math.sqrt(a)
     
 def operaciones(signo,a,b=None):
-    if
+    if signo =='+':
+        return suma(a,b)
+    elif signo =='-':
+        return resta(a,b)
+    elif signo =='*':
+        return multiplicacion(a,b)
+    elif signo =='/':
+        return division(a,b)
+    elif signo =='pow':
+        return potencia(a,b)
+    elif signo =='√':
+        return raiz_cuadrada(a)
+    else:
+        return 'Error operación no válida'
+    
+print(operaciones('+',5,3))
+print(operaciones('-',10,4))
+print(operaciones('*',2,6))
+print(operaciones('/',8,2))
+print(operaciones('/',9,0))
+print(operaciones('pow',2,3))
+print(operaciones('√',17))
+print(operaciones('√',-5))
+print(operaciones('%',6,4))
+    
